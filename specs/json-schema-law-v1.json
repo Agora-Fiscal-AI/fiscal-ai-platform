@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",  
+  "title": "LawDocument",
+  "type": "object",
+  "required": ["id","title","year","articles","source"],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "year": {"type": "integer"},
+    "jurisdiction": {"type": "string"},
+    "source": {"type": "string"},
+    "metadata": {
+      "type":"object",
+      "properties": {
+        "document_type": {"type":"string"},
+        "version": {"type":"string"},
+        "ingested_at": {"type":"string", "format":"date-time"}
+      }
+    },
+    "articles": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required": ["article_number","text"],
+        "properties": {
+          "article_number": {"type":"string"},
+          "title": {"type":"string"},
+          "text": {"type":"string"},
+          "sections": {
+            "type":"array",
+            "items": {"type":"object",
+              "properties": {
+                "section_number":{"type":"string"},
+                "text":{"type":"string"}
+              }
+            }
+          },
+          "metadata": {"type":"object"}
+        }
+      }
+    }
+  }
+}
