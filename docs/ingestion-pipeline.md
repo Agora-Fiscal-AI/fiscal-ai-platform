@@ -1,16 +1,16 @@
-## Ingestion Service Pipeline
-# Overview
+# Ingestion Service Pipeline V1
+## Overview
 
 The following section describes the end-to-end workflow of the Ingestion Service, detailing how legal documents move from raw input sources to fully normalized, validated, and structured outputs ready for downstream processing.
 
-## Pipeline Workflow
-# Input Sources
+# Pipeline Workflow
+## Input Sources
 
 - PDF
 
 - DOCX
 
-# Processing Steps
+## Processing Steps
 
 1. Fetch document
 Retrieve the file from the configured source (upload, crawler, or external provider).
@@ -36,7 +36,7 @@ Transform the validated XML into the normalized JSON structure used across the s
 8. Push normalized output to storage
 Store the final JSON in the designated normalized layer (S3 or DynamoDB — decision pending).
 
-# Storage Layers
+## Storage Layers
 
 - S3 Raw Store – original input files
 
@@ -44,25 +44,25 @@ Store the final JSON in the designated normalized layer (S3 or DynamoDB — deci
 
 - DynamoDB (pending discussion) – potential structured store for search and referencing
 
-# Outputs
+## Outputs
 
 - Example normalized output:
 - example-law.json
 
-# Error Handling
+## Error Handling
 
 Any failed file must be moved to:
 s3://bucket/errors/<id>
 Along with an associated log file describing the failure reason.
 
-## Pseudocode Example:
+# Pseudocode Example:
 
-# Extract content from PDF and convert to XML
+## Extract content from PDF and convert to XML
 python src/extract_pdf.py \
     --input example.pdf \
     --output xml/example.xml
 
-# Normalize and validate XML, then output canonical JSON
+## Normalize and validate XML, then output canonical JSON
 python src/normalize_xml.py \
     --input xml/example.xml \
     --schema spec/xml-schema.xsd \
