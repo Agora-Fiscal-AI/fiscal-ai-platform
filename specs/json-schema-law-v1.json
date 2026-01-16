@@ -1,18 +1,9 @@
 {
-  "law": {
-    "law_id": "lft",
-    "name": "Ley Federal del Trabajo",
-    "jurisdiction": "MX",
-    "authority": "federal",
-    "law_version": "2023-05-01",
-    "valid_from": "2023-05-01",
-    "valid_to": null,
-    "status": "vigente",
-    "source": {
-      "origin": "DOF",
-      "publication_date": "2023-05-01",
-      "document_hash": "sha256:abc123..."
-    }
+  "document": {
+    "document_id": "lft",
+    "title": "Ley Federal del Trabajo",
+    "normative_type": "ley",
+    "language": "es"
   },
 
   "structure": [
@@ -20,66 +11,37 @@
       "node_id": "lft_titulo_I",
       "node_type": "titulo",
       "label": "TÍTULO PRIMERO",
-      "position": 1,
-      "path": "lft/2023/titulo/I",
-      "metadata": {
-        "semantic_level": "macro",
-        "valid_from": "2023-05-01",
-        "valid_to": null,
-        "status": "vigente"
-      },
+      "order": 1,
+      "path": "lft/titulo/I",
+      "semantic_level": "macro",
+      "text": "TÍTULO PRIMERO\nDisposiciones Generales",
       "children": [
         {
-          "node_id": "lft_capitulo_I_1",
+          "node_id": "lft_capitulo_I",
           "node_type": "capitulo",
           "label": "CAPÍTULO I",
-          "position": 1,
-          "path": "lft/2023/titulo/I/capitulo/1",
-          "metadata": {
-            "semantic_level": "macro",
-            "valid_from": "2023-05-01",
-            "status": "vigente"
-          },
+          "order": 1,
+          "path": "lft/titulo/I/capitulo/I",
+          "semantic_level": "macro",
+          "text": "CAPÍTULO I\nDe las relaciones de trabajo",
           "children": [
             {
               "node_id": "lft_articulo_15",
               "node_type": "articulo",
               "label": "Artículo 15",
-              "position": 15,
-              "path": "lft/2023/articulo/15",
-              "metadata": {
-                "semantic_level": "meso",
-                "valid_from": "2023-05-01",
-                "status": "vigente"
-              },
+              "order": 15,
+              "path": "lft/articulo/15",
+              "semantic_level": "meso",
               "text": "El patrón será responsable de las obligaciones...",
               "children": [
                 {
                   "node_id": "lft_articulo_15_frac_I",
                   "node_type": "fraccion",
                   "label": "Fracción I",
-                  "position": 1,
-                  "path": "lft/2023/articulo/15/fraccion/I",
-                  "metadata": {
-                    "semantic_level": "micro",
-                    "valid_from": "2023-05-01",
-                    "status": "vigente"
-                  },
+                  "order": 1,
+                  "path": "lft/articulo/15/fraccion/I",
+                  "semantic_level": "micro",
                   "text": "Cumplir con las disposiciones legales...",
-                  "children": []
-                },
-                {
-                  "node_id": "lft_articulo_15_frac_II",
-                  "node_type": "fraccion",
-                  "label": "Fracción II",
-                  "position": 2,
-                  "path": "lft/2023/articulo/15/fraccion/II",
-                  "metadata": {
-                    "semantic_level": "micro",
-                    "valid_from": "2023-05-01",
-                    "status": "vigente"
-                  },
-                  "text": "Registrar a los trabajadores ante el IMSS...",
                   "children": []
                 }
               ]
@@ -88,12 +50,5 @@
         }
       ]
     }
-  ],
-
-  "ingestion": {
-    "ingestion_run_id": "01JAKR9Z6FZ3WQ2M5T8",
-    "normalized_at": "2026-01-05T20:15:00Z",
-    "pipeline_version": "v1.0.0",
-    "source_s3": "s3://fiscal-ai/raw/lft/2023-05-01.pdf"
-  }
+  ]
 }
