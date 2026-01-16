@@ -1,0 +1,26 @@
+{
+  "law_id": "ley_federal_trabajo",
+
+  "normnodes": [
+    {
+      "normnode_id": "lft_articulo_15",
+      "semantic_level": "meso",
+      "position": {
+        "type": "articulo",
+        "ordinal": "15",
+        "order_index": 15
+      },
+      "parent_id": "lft_capitulo_II"
+    },
+    {
+      "normnode_id": "lft_articulo_15_frac_I",
+      "semantic_level": "micro",
+      "position": {
+        "type": "fraccion",
+        "ordinal": "I",
+        "order_index": 1
+      },
+      "parent_id": "lft_articulo_15"
+    }
+  ]
+}
