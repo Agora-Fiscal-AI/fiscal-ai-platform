@@ -11,36 +11,28 @@
       "node_id": "lft_titulo_I",
       "node_type": "titulo",
       "label": "TÍTULO PRIMERO",
-      "order": 1,
       "path": "lft/titulo/I",
-      "semantic_level": "macro",
       "text": "TÍTULO PRIMERO\nDisposiciones Generales",
       "children": [
         {
           "node_id": "lft_capitulo_I",
           "node_type": "capitulo",
           "label": "CAPÍTULO I",
-          "order": 1,
           "path": "lft/titulo/I/capitulo/I",
-          "semantic_level": "macro",
           "text": "CAPÍTULO I\nDe las relaciones de trabajo",
           "children": [
             {
               "node_id": "lft_articulo_15",
               "node_type": "articulo",
               "label": "Artículo 15",
-              "order": 15,
               "path": "lft/articulo/15",
-              "semantic_level": "meso",
               "text": "El patrón será responsable de las obligaciones...",
               "children": [
                 {
                   "node_id": "lft_articulo_15_frac_I",
                   "node_type": "fraccion",
                   "label": "Fracción I",
-                  "order": 1,
                   "path": "lft/articulo/15/fraccion/I",
-                  "semantic_level": "micro",
                   "text": "Cumplir con las disposiciones legales...",
                   "children": []
                 }
